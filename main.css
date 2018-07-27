@@ -1,7 +1,38 @@
 * {
     box-sizing: border-box;
-  }
-  html, body {
-    margin:0;
-    padding:0;
-  }  
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Start Section Styles */
+
+section {
+    width: 100%;
+    min-height: 800px;
+}
+
+#home {
+    background-color: green;
+}
+
+#one {
+    background-color: blue;
+}
+
+#two {
+    background-color: yellow;
+}
+
+#three {
+    background-color: salmon;
+}
+
+#four {
+    background-color: purple;
+}
+
+/* End Section Styles */
