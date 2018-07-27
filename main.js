@@ -16,6 +16,35 @@ $(function(){
 
         //앵커를 통해 이동할때, URL에 #id가 붙지 않도록 함.
         e.preventDefault();
-    })
+    });
+
+    $(window).on('scroll',function(){
+        findPosition();
+    });
+
+    // function findPosition(){
+    //     var sTop = $(window).scrollTop();
+
+    //     $('section').each(function(){
+    //         var id = $(this).attr('id'),
+    //             offset = $(this).offset().top-200,
+    //             height = $(this).height();
+
+    //         if(sTop >= offset && sTop < offset + height){
+    //             link.removeClass('active');
+    //             $('#navbar').find('[data-scroll="'+id+'"]').addClass('active');
+    //         }
+    //     });
+    // }
+    function findPosition(){
+        $('section').each(function(){
+            if( ($(this).offset().top - $(window).scrollTop() ) < 20){
+                link.removeClass('active');
+                $('#navbar').find('[data-scroll="'+ $(this).attr('id') +'"]').addClass('active');
+            }
+        });
+    }
+
+    findPosition();
 
 });
